@@ -30,6 +30,7 @@ exports.signin = async (req, res,next) => {
         id: user.id,
         name: user.name,
         email: user.email,
+        rol: (user.rol)?user.rol:"N/A"
       },
       config.secret,
       {
