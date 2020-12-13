@@ -1,11 +1,8 @@
-/*en caso de  hacer uso con el directorio controlador se 
-debe importar como se observa en la siguiente linea, con el nombre del archivo js
-que contiene la logica */
-const controller = require('./controller/controller.js');
 const express = require('express');
 const morgan = require('morgan');
-const app = express()
+const app = express()   //instancia de express
 const bodyParser = require('body-parser');
+const apiRouter = require('./routes');
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -13,7 +10,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(morgan('dev'));
+app.use(morgan('dev'));  //middleware morgan para detectar peticiones
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -26,7 +23,8 @@ app.get('/', function(req, res) {
     res.send("Estructura base del proyecto backend");
 });
 
-app.post('/api/auth/signin', controller.signin);
+//Manejja todas las peticiones que vengan por la rama de ruta  url/api
+app.use('/api', apiRouter);
 
 const port = 3000
 app.listen(port, () => {

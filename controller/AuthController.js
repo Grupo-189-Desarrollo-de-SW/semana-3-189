@@ -3,7 +3,8 @@ const db = require("../models");
 var jwt = require("jsonwebtoken");
 var bcrypt = require("bcryptjs");
 
-exports.signin = async (req, res,next) => {
+// url/api/auth/signin
+exports.signin = async (req, res, next) => {
   try {
     let user = await db.user.findOne({
       where: {
@@ -30,7 +31,7 @@ exports.signin = async (req, res,next) => {
         id: user.id,
         name: user.name,
         email: user.email,
-        rol: (user.rol)?user.rol:"N/A"
+        rol: user.rol ? user.rol : "N/A",
       },
       config.secret,
       {
@@ -40,7 +41,6 @@ exports.signin = async (req, res,next) => {
 
     //El usuario se loguea exitosamente
     res.status(200).send({ accessToken: token });
-    
   } catch (err) {
     res.status(500).send("Error -> " + err);
     next(err);
