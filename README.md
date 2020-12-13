@@ -17,6 +17,55 @@ caso de no cumplir con la estructura base alojada en github, la prueba arrojará
 
 La estructura base [link github](https://github.com/Tecnalia-Cilco-3/semana-3).
 
+## Usage API
+
+### Login 
+```
+POST http://localhost:3000/api/auth/signin
+```
+#### Ejemplo del cuerpo de la solicitud
+```
+{
+    email:"ejemplo@gmail.com"
+    password: "micontraseña"
+}
+```
+
+### Consultar todos los usuarios registrados
+```
+GET http://localhost:3000/api/user/showall
+```
+
+### Registrar un usuario
+```
+POST http://localhost:3000/api/user/signup
+```
+#### Ejemplo del cuerpo de la solicitud
+```
+{
+    name: "example"
+    email:"example@gmail.com"
+    password: "123456"
+    rol:"Admin"
+}
+```
+
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run dev
+```
+
+### Run your tests
+```
+npm run test
+```
+
 ## Autores  
 - Juan José Neira Cote 
 - Gustavo Adolfo Garcia Londoño 
