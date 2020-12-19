@@ -66,6 +66,10 @@ npm run dev
 npm run test
 ```
 
+### Despliegue en Heroku
+
+https://safe-waters-18200.herokuapp.com
+
 ## Autores  
 - Juan José Neira Cote 
 - Gustavo Adolfo Garcia Londoño 
