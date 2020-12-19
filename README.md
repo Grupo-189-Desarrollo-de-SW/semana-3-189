@@ -1,4 +1,4 @@
-# Reto Semana 3
+# Reto Semana 3 Backend
 
 ## Proyecto final Sprint III
 
@@ -11,6 +11,8 @@ enfocados al proyecto de la semana.
 - Durante la sesión 4 se hace la explicación del documento de pruebas, este nuevo documento deberá ser construido por los estudiantes para el proyecto de la semana.
 
 La interfaz debe contar con un campo para el nombre de usuario, otro campo para contraseña y un botón realizar la acción de inicio de sesión, al ingresar deberá mostrar un escritorio para el usuario en donde se visualicen su nombre y correo. En caso de fallar, se debe indicar que hubo un error en el inicio de sesión.
+
+[link repositorio del frontend](https://github.com/Grupo-189-Desarrollo-de-SW/semana-3-189-frontend).
 
 Para la calificación del proyecto de la semana, los estudiantes deben conservar una estructura base, esta estructura garantizará que se puedan realizar pruebas automáticas. En
 caso de no cumplir con la estructura base alojada en github, la prueba arrojará un fallo que afectará la calificación.
